@@ -56,4 +56,12 @@ public class MonsterController {
         return "redirect:/vault";
     }
 
+//    @GetMapping("/wishlist/{id}")
+//    public String showWishlist(@PathVariable(value="id") long id, Model model) {
+//        Wishlist wishlist = wishlistService.getWishlistById(id);
+//        model.addAttribute("moviesList", wishlist.getMovies());
+//        return "wishlist";
+//    }
+
+
 }

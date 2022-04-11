@@ -5,6 +5,7 @@ import com.jonathankim.monster_factory.repository.MonsterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class MonsterServiceImpl implements MonsterService {
@@ -26,9 +27,12 @@ public class MonsterServiceImpl implements MonsterService {
 
     @Override
     public Monster getMonsterById(long id) {
-        Monster monster = monsterRepository.getById(id);
-        if(monster == null) {
-            throw new MonsterNotFoundException();
+        Monster monster;
+
+        try {
+            monster = monsterRepository.getById(id);
+        } catch(NoSuchElementException e) {
+            throw new MonsterNotFoundException(id);
         }
         return monster;
     }

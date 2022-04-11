@@ -4,6 +4,10 @@ This is my full-stack project for TekSystems.
 The goal of the appliation is to allow users to manage a personal vault by allowing them to add premade monsters 
 to their vaults.
 
+## Progress:
+ - Currently about 60% done according to rubric
+ - Added security and All entities
+ - Need to map relations
 ## User Stories:
  - As a user I want to create an account so that I can access the website
  - As a user I want to sign in so that I can access the website

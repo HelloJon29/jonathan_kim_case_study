@@ -28,7 +28,7 @@
                 <a href="/vault" class="nav-link">Vault</a>
             </li>
             <li class="nav-item">
-                <a href="/location" class="nav-link active">Location</a>
+                <a href="/showLocations" class="nav-link active">Location</a>
             </li>
         </ul>
     </div>
@@ -37,6 +37,21 @@
 <div class="landing">
     <div class="content text-center text-uppercase text-light">
         <h4>Locations</h4>
+        <div class="container">
+            <!-- for table -->
+            <table border="1" class="table table-responsive-md text-light">
+                <thead>
+                <tr>
+                    <th>Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="location : ${listLocations}">
+                    <td th:text="${location.country}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
         <a href="/showNewMonsterForm" class="btn btn-first">Create</a>
         <a href="/logout" class="btn btn-first">Logout</a>
     </div>
