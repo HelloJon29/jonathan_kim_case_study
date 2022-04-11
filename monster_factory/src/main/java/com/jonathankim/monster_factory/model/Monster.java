@@ -20,8 +20,8 @@ public class Monster {
     @Column(name = "monster_color")
     private String color;
 
-//    @Column(name = "monster_loc")
-//    private Location location;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Location location;
 
     // Getters Setters
     public long getId() {
@@ -56,11 +56,11 @@ public class Monster {
         this.color = color;
     }
 
-//    public Location getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(Location location) {
-//        this.location = location;
-//    }
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 }

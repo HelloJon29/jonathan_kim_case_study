@@ -10,7 +10,7 @@
 
 <body>
 <!-- Top navigation bar -->
-<nav class="navbar fixed-top navbar-expand-auto navbar-dark">
+<nav class="navbar fixed-top navbar-expand-auto navbar-dark p-2">
     <div class="navbar-brand">Monster Factory</div>
 
     <button class="navbar-toggler"
@@ -22,13 +22,13 @@
     <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="/" class="nav-link active">Home</a>
+                <a href="/" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/showNewMonsterForm" class="nav-link">Create</a>
             </li>
             <li class="nav-item">
-                <a href="/vault" class="nav-link">Vault</a>
+                <a href="/vault" class="nav-link active">Vault</a>
             </li>
             <li class="nav-item">
                 <a href="/" class="nav-link">Location</a>
@@ -58,7 +58,7 @@
                     <td th:text="${monster.name}"></td>
                     <td th:text="${monster.size}"></td>
                     <td th:text="${monster.color}"></td>
-<!--                    <td th:text="${monster.location_id}"></td>-->
+                    <td th:text="${monster.location}"></td>
                     <td> <a th:href="@{/showFormForUpdate/{id}(id=${monster.id})}" class="btn btn-second">Update</a>
                         <a th:href="@{/deleteMonster/{id}(id=${monster.id})}" class="btn btn-second">Delete</a>
                     </td>

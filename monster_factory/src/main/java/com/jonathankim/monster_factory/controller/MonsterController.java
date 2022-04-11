@@ -19,7 +19,7 @@ public class MonsterController {
         this.monsterService = monsterService;
     }
 
-    @GetMapping("/index")
+    @GetMapping("/home")
     public String showIndex() {
         return "/";
     }
