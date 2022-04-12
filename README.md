@@ -1,13 +1,19 @@
 # casestudy-fullstack-webapplication
-## Monster Vault (tentative)
+## Monster Factory (tentative)
 This is my full-stack project for TekSystems.
 The goal of the appliation is to allow users to manage a personal vault by allowing them to add premade monsters 
 to their vaults.
 
 ## Progress:
+**4-10**
  - Currently about 60% done according to rubric
  - Added security and All entities
  - Need to map relations
+
+**4-11**
+ - currently about 70% done
+ - updated security to use database with user and role models
+ - began work on mapping relations
 ## User Stories:
  - As a user I want to create an account so that I can access the website
  - As a user I want to sign in so that I can access the website
