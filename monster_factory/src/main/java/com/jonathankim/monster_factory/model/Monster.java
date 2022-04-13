@@ -21,6 +21,7 @@ public class Monster {
     private String color;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "location_id")
     private Location location;
 
     // Getters Setters

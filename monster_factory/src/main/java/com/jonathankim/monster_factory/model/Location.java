@@ -9,12 +9,8 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String country;
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "location_id")
-    private List<Monster> monsterList;
 
     //Getters and Setters
-
     public long getId() {
         return id;
     }
@@ -29,13 +25,5 @@ public class Location {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public List<Monster> getMonsterList() {
-        return monsterList;
-    }
-
-    public void setMonsterList(List<Monster> monsterList) {
-        this.monsterList = monsterList;
     }
 }

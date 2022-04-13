@@ -33,4 +33,9 @@ public class LocationServiceImpl implements LocationService{
         }
         return location;
     }
+
+    @Override
+    public void saveLocation(Location location) {
+        locationRepository.save(location);
+    }
 }

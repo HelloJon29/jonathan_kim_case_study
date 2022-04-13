@@ -1,6 +1,8 @@
 package com.jonathankim.monster_factory.controller;
 
+import com.jonathankim.monster_factory.model.Location;
 import com.jonathankim.monster_factory.model.Monster;
+import com.jonathankim.monster_factory.service.LocationService;
 import com.jonathankim.monster_factory.service.MonsterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,13 +12,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class MonsterController {
     // instantiate MonsterService class for DI
     private MonsterService monsterService;
+    private LocationService locationService;
     @Autowired
-    public MonsterController(MonsterService monsterService) {
+    public MonsterController(MonsterService monsterService, LocationService locationService) {
         this.monsterService = monsterService;
+        this.locationService = locationService;
     }
 
     @GetMapping("/home")
@@ -33,7 +39,9 @@ public class MonsterController {
     @GetMapping("/showNewMonsterForm")
     public String showNewMonsterForm(Model model) {
         Monster monster = new Monster();
+        List<Location> listLocations = locationService.getAllLocations();
         model.addAttribute("monster", monster);
+        model.addAttribute("listLocations", listLocations);
         return "new_monster";
     }
 
@@ -55,13 +63,4 @@ public class MonsterController {
         monsterService.deleteMonsterById(id);
         return "redirect:/vault";
     }
-
-//    @GetMapping("/wishlist/{id}")
-//    public String showWishlist(@PathVariable(value="id") long id, Model model) {
-//        Wishlist wishlist = wishlistService.getWishlistById(id);
-//        model.addAttribute("moviesList", wishlist.getMovies());
-//        return "wishlist";
-//    }
-
-
 }

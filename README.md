@@ -5,15 +5,20 @@ The goal of the appliation is to allow users to manage a personal vault by allow
 to their vaults.
 
 ## Progress:
-**4-10**
+**4-11**
  - Currently about 60% done according to rubric
  - Added security and All entities
  - Need to map relations
 
-**4-11**
+**4-12**
  - currently about 70% done
  - updated security to use database with user and role models
  - began work on mapping relations
+
+**4-13**
+ - Currently 75% done
+ - connected Monster and Location table relationship and display it on the front for crud operation and view in the vault
+ - Need to display monsters in location tab next
 ## User Stories:
  - As a user I want to create an account so that I can access the website
  - As a user I want to sign in so that I can access the website

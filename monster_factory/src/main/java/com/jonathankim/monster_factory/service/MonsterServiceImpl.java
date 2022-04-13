@@ -19,11 +19,11 @@ public class MonsterServiceImpl implements MonsterService {
     @Override
     public List<Monster> getAllMonsters() {
         return monsterRepository.findAll();
-    }
+    } // add empty list exception
     @Override
     public void saveMonster(Monster monster) {
         monsterRepository.save(monster);
-    }
+    } // add already exists exception
 
     @Override
     public Monster getMonsterById(long id) {
