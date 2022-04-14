@@ -51,10 +51,12 @@ public class MonsterController {
         return "redirect:/vault";
     }
 
-    @GetMapping("/showFormForUpdate/{id}")
+    @GetMapping("/showFormForUpdate/{id}") // add location for update
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model){
         Monster monster = monsterService.getMonsterById(id);
+        List<Location> listLocations = locationService.getAllLocations();
         model.addAttribute("monster", monster);
+        model.addAttribute("listLocations", listLocations);
         return "update_monster";
     }
 

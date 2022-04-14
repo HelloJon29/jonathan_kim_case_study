@@ -25,7 +25,16 @@
 
         <input type="text" th:field="*{color}" class="form-control mb-4 col-4">
 
-<!--        <input type="text" th:field="*{location}" class="form-control mb-4 col-4">-->
+        <div class="form-group row">
+            <label class="col-form-label col-sm-4"></label>
+            <div>
+                <select th:field="*{location}" class="form-control">
+                    <th:block th:each="location : ${listLocations}">
+                        <option th:text="${location.country}" th:value="${location.id}"></option>
+                    </th:block>
+                </select>
+            </div>
+        </div>
 
         <button type="submit" class="btn btn-info col-2"> Update Employee</button>
     </form>
