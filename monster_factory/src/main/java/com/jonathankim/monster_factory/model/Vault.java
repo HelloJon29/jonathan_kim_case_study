@@ -8,8 +8,6 @@ public class Vault {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Monster> monsterList;
 
     //Getter and Setters
     public long getId() {
@@ -20,11 +18,4 @@ public class Vault {
         this.id = id;
     }
 
-    public List<Monster> getMonsterList() {
-        return monsterList;
-    }
-
-    public void setMonsterList(List<Monster> monsterList) {
-        this.monsterList = monsterList;
-    }
 }

@@ -2,6 +2,8 @@ package com.jonathankim.monster_factory.controller;
 
 import com.jonathankim.monster_factory.model.Location;
 import com.jonathankim.monster_factory.model.Monster;
+import com.jonathankim.monster_factory.model.User;
+import com.jonathankim.monster_factory.security.UserService;
 import com.jonathankim.monster_factory.service.LocationService;
 import com.jonathankim.monster_factory.service.MonsterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -19,10 +22,13 @@ public class MonsterController {
     // instantiate MonsterService class for DI
     private MonsterService monsterService;
     private LocationService locationService;
+    private UserService userService;
+
     @Autowired
-    public MonsterController(MonsterService monsterService, LocationService locationService) {
+    public MonsterController(MonsterService monsterService, LocationService locationService, UserService userService) {
         this.monsterService = monsterService;
         this.locationService = locationService;
+        this.userService = userService;
     }
 
     @GetMapping("/home")
