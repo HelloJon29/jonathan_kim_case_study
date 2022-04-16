@@ -1,8 +1,5 @@
-package com.jonathankim.monster_factory.service;
+package com.jonathankim.monster_factory.location;
 
-import com.jonathankim.monster_factory.model.Location;
-import com.jonathankim.monster_factory.model.Monster;
-import com.jonathankim.monster_factory.repository.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,6 @@
-package com.jonathankim.monster_factory.model;
+package com.jonathankim.monster_factory.monster;
+
+import com.jonathankim.monster_factory.location.Location;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;

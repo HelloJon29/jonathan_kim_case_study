@@ -1,6 +1,4 @@
-package com.jonathankim.monster_factory.service;
-
-import com.jonathankim.monster_factory.model.Location;
+package com.jonathankim.monster_factory.location;
 
 import java.util.List;
 

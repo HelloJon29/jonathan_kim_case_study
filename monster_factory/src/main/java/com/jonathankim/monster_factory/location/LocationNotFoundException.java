@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.service;
+package com.jonathankim.monster_factory.location;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

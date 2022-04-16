@@ -1,6 +1,5 @@
-package com.jonathankim.monster_factory.repository;
+package com.jonathankim.monster_factory.vault;
 
-import com.jonathankim.monster_factory.model.Vault;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

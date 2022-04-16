@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.service;
+package com.jonathankim.monster_factory.monster;
 
 public class MonsterNotFoundException extends RuntimeException {
     public MonsterNotFoundException(long id) {

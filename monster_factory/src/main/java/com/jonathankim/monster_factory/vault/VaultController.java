@@ -1,11 +1,7 @@
-package com.jonathankim.monster_factory.controller;
+package com.jonathankim.monster_factory.vault;
 
-import com.jonathankim.monster_factory.service.MonsterService;
-import com.jonathankim.monster_factory.service.VaultService;
+import com.jonathankim.monster_factory.monster.MonsterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 public class VaultController {
     private VaultService vaultService;

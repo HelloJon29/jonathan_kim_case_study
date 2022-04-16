@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.service;
+package com.jonathankim.monster_factory.vault;
 
 public class VaultNotFoundException extends RuntimeException {
     public VaultNotFoundException(long id) {

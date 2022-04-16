@@ -1,7 +1,5 @@
-package com.jonathankim.monster_factory.service;
+package com.jonathankim.monster_factory.monster;
 
-import com.jonathankim.monster_factory.model.Monster;
-import com.jonathankim.monster_factory.repository.MonsterRepository;
 import com.jonathankim.monster_factory.security.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

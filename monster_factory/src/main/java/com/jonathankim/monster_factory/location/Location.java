@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.model;
+package com.jonathankim.monster_factory.location;
 
 import javax.persistence.*;
 import java.util.List;

@@ -1,6 +1,4 @@
-package com.jonathankim.monster_factory.service;
-
-import com.jonathankim.monster_factory.model.Monster;
+package com.jonathankim.monster_factory.monster;
 
 import java.util.List;
 

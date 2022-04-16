@@ -1,11 +1,8 @@
-package com.jonathankim.monster_factory.controller;
+package com.jonathankim.monster_factory.monster;
 
-import com.jonathankim.monster_factory.model.Location;
-import com.jonathankim.monster_factory.model.Monster;
-import com.jonathankim.monster_factory.model.User;
+import com.jonathankim.monster_factory.location.Location;
 import com.jonathankim.monster_factory.security.UserService;
-import com.jonathankim.monster_factory.service.LocationService;
-import com.jonathankim.monster_factory.service.MonsterService;
+import com.jonathankim.monster_factory.location.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -29,11 +25,6 @@ public class MonsterController {
         this.monsterService = monsterService;
         this.locationService = locationService;
         this.userService = userService;
-    }
-
-    @GetMapping("/home")
-    public String showIndex() {
-        return "/";
     }
 
     @GetMapping("/vault")

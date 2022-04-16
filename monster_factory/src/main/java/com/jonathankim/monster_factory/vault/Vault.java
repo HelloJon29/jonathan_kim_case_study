@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.model;
+package com.jonathankim.monster_factory.vault;
 
 import javax.persistence.*;
 import java.util.List;

@@ -1,6 +1,5 @@
-package com.jonathankim.monster_factory.repository;
+package com.jonathankim.monster_factory.location;
 
-import com.jonathankim.monster_factory.model.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

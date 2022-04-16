@@ -1,6 +1,6 @@
-package com.jonathankim.monster_factory.controller;
+package com.jonathankim.monster_factory.security;
 
-import com.jonathankim.monster_factory.model.User;
+import com.jonathankim.monster_factory.security.User;
 import com.jonathankim.monster_factory.security.UserRegistrationDto;
 import com.jonathankim.monster_factory.security.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
