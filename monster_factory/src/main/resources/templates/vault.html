@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Monster Factory Vault</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +23,22 @@
     <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="/" class="nav-link">Home</a>
+                <a href="/" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/showNewMonsterForm" class="nav-link">Create</a>
             </li>
             <li class="nav-item">
-                <a href="/vault" class="nav-link active">Vault</a>
+                <a href="/vault" class="nav-link">Vault</a>
             </li>
             <li class="nav-item">
                 <a href="/showLocations" class="nav-link">Location</a>
+            </li>
+            <li class="nav-item">
+                <a href="/login" class="nav-link" sec:authorize="isAnonymous()">Login</a>
+            </li>
+            <li class="nav-item">
+                <a href="/logout" class="nav-link" sec:authorize="isAuthenticated()">Logout</a>
             </li>
         </ul>
     </div>
@@ -39,7 +46,7 @@
 
 <div class="landing">
     <div class="content text-center text-uppercase text-light">
-        <h4>Monster Vault</h4>
+        <h4>Created Monsters</h4>
 
         <div class="container">
             <!-- for table -->
@@ -49,7 +56,7 @@
                     <th>Monster Name</th>
                     <th>Monster Size</th>
                     <th>Monster Color</th>
-                    <th> Location </th>
+                    <th>Location</th>
                     <th>Actions</th>
                 </tr>
                 </thead>

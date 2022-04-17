@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Monster Factory Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="/" class="nav-link active">Home</a>
+                <a href="/static" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/showNewMonsterForm" class="nav-link">Create</a>
@@ -31,10 +33,10 @@
                 <a href="/showLocations" class="nav-link">Location</a>
             </li>
             <li class="nav-item">
-                <a href="/login" class="nav-link">Login</a>
+                <a href="/login" class="nav-link" sec:authorize="false">Login</a>
             </li>
             <li class="nav-item">
-                <a href="/logout" class="nav-link">Logout</a>
+                <a href="/logout" class="nav-link" sec:authorize="true">Logout</a>
             </li>
         </ul>
     </div>
@@ -47,7 +49,15 @@
         <a href="/showNewMonsterForm" class="btn btn-first">Create</a>
     </div>
 </div>
+<div sec:authorize="isAuthenticated()">
+    Authenticated as <span sec:authentication="name"></span></div>
 
+<a th:href="@{/logout}" sec:authorize="isAuthenticated()">
+    <button class="btn btn-primary">Logout</button>
+</a>
+<a th:href="@{/login}" sec:authorize="isAnonymous()">
+    <button class="btn btn-primary">Login</button>
+</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

@@ -1,6 +1,7 @@
 package com.jonathankim.monster_factory.monster;
 
 import com.jonathankim.monster_factory.location.Location;
+import com.jonathankim.monster_factory.vault.Vault;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
