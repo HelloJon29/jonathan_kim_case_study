@@ -8,8 +8,8 @@ The goal of the appliation is to allow users to manage a personal vault by allow
  - [Technical Challenges](#Technical-Challenges)
  - [Lessons Learned](#Lessons-Learned)
  - [Future Improvements](#Future-Improvements)
- - [Technical Architecture](http://)
- - [Wire Frame](http://)
+ - [Technical Architecture](https://github.com/HelloJon29/jonathan_kim_case_study/blob/main/technical_architecture.jpg)
+ - [Wire Frame](https://github.com/HelloJon29/jonathan_kim_case_study/blob/main/Kim_Jonathan_Wireframe.pdf)
  - [Schema Diagram](http://)
  - [JIRA](https://jonk.atlassian.net/jira/software/projects/KJC/boards/2/roadmap)
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
