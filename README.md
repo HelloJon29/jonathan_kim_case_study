@@ -20,6 +20,9 @@ The goal of the appliation is to allow users to manage a personal vault by allow
  - Completed new models(Color, Size) and mapped relations to monster model
  - Updated MonsterController to display new models on front end for saving and updating
  - Planning 1 last model for monster characteristics
+ - Updated Create Monster and Update monster html pages
+ - New css file added
+ - updated readme to display overview links
 
 **4-16**
  - Currently 80% done
