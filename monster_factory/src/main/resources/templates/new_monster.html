@@ -45,16 +45,33 @@
     <div class="content text-center text-uppercase text-light">
         <h4>Create New Monster</h4>
         <div class="container">
-            <h1>Monster Management System</h1>
             <hr>
             <h2>Save Monster</h2>
 
             <form action="#" th:action="@{/saveMonster}" th:object="${monster}" method="POST">
                 <input type="text" th:field="*{name}" placeholder="Monster Name" class="form-control mb-4 col-4">
 
-                <input type="text" th:field="*{size}" placeholder="Monster size" class="form-control mb-4 col-4">
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4"></label>
+                    <div>
+                        <select th:field="*{size}" class="form-control">
+                            <th:block th:each="size : ${listSizes}">
+                                <option th:text="${size.name}" th:value="${size.id}"></option>
+                            </th:block>
+                        </select>
+                    </div>
+                </div>
 
-                <input type="text" th:field="*{color}" placeholder="Monster color" class="form-control mb-4 col-4">
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-4"></label>
+                    <div>
+                        <select th:field="*{color}" class="form-control">
+                            <th:block th:each="color : ${listColors}">
+                                <option th:text="${color.name}" th:value="${color.id}"></option>
+                            </th:block>
+                        </select>
+                    </div>
+                </div>
 
                 <div class="form-group row">
                     <label class="col-form-label col-sm-4"></label>
@@ -70,7 +87,7 @@
                 <button type="submit" class="btn btn-info col-2"> Save Monster</button>
             </form>
             <hr>
-            <a th:href="@{/vault}"> Back to Monster List</a>
+            <a th:href="@{/vault}" class="btn btn-first"> Vault</a>
         </div>
 <!--        <a class="btn btn-first" href="/pages/login.html">Get Started</a>-->
     </div>

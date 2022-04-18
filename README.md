@@ -15,16 +15,24 @@ The goal of the appliation is to allow users to manage a personal vault by allow
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
 ## Daily Progress
+**4-18**
+ - Currently 90% done
+ - Completed new models(Color, Size) and mapped relations to monster model
+ - Updated MonsterController to display new models on front end for saving and updating
+ - Planning 1 last model for monster characteristics
+
 **4-16**
  - Currently 80% done
  - scrapped vault model for redundancy
  - Implemented thymeleaf extra security features on front end (Login/logout interchanging when session is made)
  - planned new models, color and size
  - planning features model
+
 **4-14**
  - Currently 75% done
  - Planning vault model and session management
  - fixed updating monsters to work with location
+
 **4-13**
  - Currently 75% done
  - connected Monster and Location table relationship and display it on the front for crud operation and view in the vault

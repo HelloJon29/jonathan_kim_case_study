@@ -63,8 +63,8 @@
                 <tbody>
                 <tr th:each="monster : ${listMonsters}">
                     <td th:text="${monster.name}"></td>
-                    <td th:text="${monster.size}"></td>
-                    <td th:text="${monster.color}"></td>
+                    <td th:text="${monster.size.name}"></td>
+                    <td th:text="${monster.color.name}"></td>
                     <td th:text="${monster.location.country}"></td>
                     <td> <a th:href="@{/showFormForUpdate/{id}(id=${monster.id})}" class="btn btn-second">Update</a>
                         <a th:href="@{/deleteMonster/{id}(id=${monster.id})}" class="btn btn-second">Delete</a>

@@ -1,5 +1,6 @@
-package com.jonathankim.monster_factory.location;
+package com.jonathankim.monster_factory.controller;
 
+import com.jonathankim.monster_factory.location.LocationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,8 +1,13 @@
-package com.jonathankim.monster_factory.monster;
+package com.jonathankim.monster_factory.controller;
 
+import com.jonathankim.monster_factory.color.Color;
+import com.jonathankim.monster_factory.color.ColorService;
 import com.jonathankim.monster_factory.location.Location;
-import com.jonathankim.monster_factory.security.UserService;
+import com.jonathankim.monster_factory.monster.Monster;
+import com.jonathankim.monster_factory.monster.MonsterService;
 import com.jonathankim.monster_factory.location.LocationService;
+import com.jonathankim.monster_factory.size.Size;
+import com.jonathankim.monster_factory.size.SizeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,21 +16,22 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.security.Principal;
 import java.util.List;
 
 @Controller
 public class MonsterController {
-    // instantiate MonsterService class for DI
     private MonsterService monsterService;
     private LocationService locationService;
-    private UserService userService;
+    private SizeService sizeService;
+    private ColorService colorService;
+
 
     @Autowired
-    public MonsterController(MonsterService monsterService, LocationService locationService, UserService userService) {
+    public MonsterController(MonsterService monsterService, LocationService locationService, SizeService sizeService, ColorService colorService) {
         this.monsterService = monsterService;
         this.locationService = locationService;
-        this.userService = userService;
+        this.sizeService = sizeService;
+        this.colorService = colorService;
     }
 
     @GetMapping("/vault")
@@ -38,8 +44,13 @@ public class MonsterController {
     public String showNewMonsterForm(Model model) {
         Monster monster = new Monster();
         List<Location> listLocations = locationService.getAllLocations();
+        List<Size> listSizes = sizeService.getAllSizes();
+        List<Color> listColors = colorService.getAllColors();
+
         model.addAttribute("monster", monster);
         model.addAttribute("listLocations", listLocations);
+        model.addAttribute("listSizes", listSizes);
+        model.addAttribute("listColors", listColors);
         return "new_monster";
     }
 
@@ -53,8 +64,13 @@ public class MonsterController {
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model){
         Monster monster = monsterService.getMonsterById(id);
         List<Location> listLocations = locationService.getAllLocations();
+        List<Size> listSizes = sizeService.getAllSizes();
+        List<Color> listColors = colorService.getAllColors();
+
         model.addAttribute("monster", monster);
         model.addAttribute("listLocations", listLocations);
+        model.addAttribute("listSizes", listSizes);
+        model.addAttribute("listColors", listColors);
         return "update_monster";
     }
 
