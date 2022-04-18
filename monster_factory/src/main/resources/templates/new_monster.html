@@ -1,40 +1,6 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
-
-<!--<head>-->
-<!--    <meta charset="ISO-8859-1">-->
-<!--    <title>Monster Management System</title>-->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
-<!--</head>-->
-
-<!--<body>-->
-<!--<div class="container">-->
-<!--    <h1>Monster Management System</h1>-->
-<!--    <hr>-->
-<!--    <h2>Save Monster</h2>-->
-
-<!--    <form action="#" th:action="@{/saveMonster}" th:object="${monster}" method="POST">-->
-<!--        <input type="text" th:field="*{name}" placeholder="Monster Name" class="form-control mb-4 col-4">-->
-
-<!--        <input type="text" th:field="*{size}" placeholder="Monster size" class="form-control mb-4 col-4">-->
-
-<!--        <input type="text" th:field="*{color}" placeholder="Monster color" class="form-control mb-4 col-4">-->
-
-<!--&lt;!&ndash;        <input type="text" th:field="*{location}" placeholder="Location" class="form-control mb-4 col-4">&ndash;&gt;-->
-
-<!--        <button type="submit" class="btn btn-info col-2"> Save Monster</button>-->
-<!--    </form>-->
-
-<!--    <hr>-->
-
-<!--    <a th:href="@{/vault}"> Back to Monster List</a>-->
-<!--</div>-->
-<!--</body>-->
-
-<!--</html>-->
-
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Monster Factory Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="/" class="nav-link">Home</a>
+                <a href="/static" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a href="/showNewMonsterForm" class="nav-link active">Create</a>
@@ -64,6 +30,12 @@
             </li>
             <li class="nav-item">
                 <a href="/showLocations" class="nav-link">Location</a>
+            </li>
+            <li class="nav-item">
+                <a href="/login" class="nav-link" sec:authorize="isAnonymous()">Login</a>
+            </li>
+            <li class="nav-item">
+                <a href="/logout" class="nav-link" sec:authorize="isAuthenticated()">Logout</a>
             </li>
         </ul>
     </div>

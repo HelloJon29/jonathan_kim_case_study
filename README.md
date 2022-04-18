@@ -1,9 +1,26 @@
 # casestudy-fullstack-webapplication
-## Monster Factory Vault Feature Branch
+## Monster Factory app
 This is my full-stack project for TekSystems.
 The goal of the appliation is to allow users to manage a personal vault by allowing them to create, edit and delete monsters.
+## Overview
+ - [User Stories](#User-Stories)
+ - [Daily Progress](#Daily-Progress)
+ - [Technical Challenges](#Technical-Challenges)
+ - [Lessons Learned](#Lessons-Learned)
+ - [Future Improvements](#Future-Improvements)
+ - [Technical Architecture](http://)
+ - [Wire Frame](http://)
+ - [Schema Diagram](http://)
+ - [JIRA](https://jonk.atlassian.net/jira/software/projects/KJC/boards/2/roadmap)
+>please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
-## Progress:
+## Daily Progress
+**4-16**
+ - Currently 80% done
+ - scrapped vault model for redundancy
+ - Implemented thymeleaf extra security features on front end (Login/logout interchanging when session is made)
+ - planned new models, color and size
+ - planning features model
 **4-14**
  - Currently 75% done
  - Planning vault model and session management
@@ -22,7 +39,7 @@ The goal of the appliation is to allow users to manage a personal vault by allow
  - Currently about 60% done according to rubric
  - Added security and All entities
  - Need to map relations
-## User Stories:
+## User Stories
  - As a user I want to create an account so that I can access the website
  - As a user I want to sign in so that I can access the website
  - As a user I want to use links at the top of each page to quickly access other pages
@@ -35,3 +52,10 @@ The goal of the appliation is to allow users to manage a personal vault by allow
  - As a user I want to go to a Monsters page to see an overall list of all monsters available so that I can easily add them later
  - As a user I want to have a homepage that shows the title of the application and access to every other page for ease of use
  - As a developer I want to be able to save customer credentials securely so that they can log in with peace of mind
+## Technical Challenges
+ - Thymeleaf not displaying authentication correctly
+ - Model relationships and displaying those to the front end
+## Lessons Learned
+
+## Future Improvements
+

@@ -1,5 +1,7 @@
 package com.jonathankim.monster_factory.location;
 
+import com.jonathankim.monster_factory.monster.Monster;
+
 import javax.persistence.*;
 import java.util.List;
 
