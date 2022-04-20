@@ -1,7 +1,7 @@
 # casestudy-fullstack-webapplication
 ## Monster Factory app
 This is my full-stack project for TekSystems.
-The goal of the appliation is to allow users to manage a personal vault by allowing them to create, edit and delete monsters.
+The goal of the application is to allow users to manage a personal vault by allowing them to create, edit and delete monsters.
 ## Overview
  - [User Stories](#User-Stories)
  - [Daily Progress](#Daily-Progress)
@@ -15,6 +15,13 @@ The goal of the appliation is to allow users to manage a personal vault by allow
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
 ## Daily Progress
+**4-19**
+ - Currently 92% done
+ - Finished html and css on front end
+ - styled login and registration pages
+ - adding javascript to table in vault view
+
+
 **4-18**
  - Currently 90% done
  - Completed new models(Color, Size) and mapped relations to monster model
