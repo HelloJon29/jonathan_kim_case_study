@@ -66,3 +66,27 @@ a.btn-second:hover {
     background: rgb(139, 68, 139);
     box-shadow: 2px 2px 10px;
 }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: rgb(119, 34, 69);
+    color: white;
+}
+
+/*table scroll*/
+
+thead {
+    position: sticky;
+}
+.container {
+    max-height: 335px;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    display: none;  /*Chrome*/
+}
+
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
