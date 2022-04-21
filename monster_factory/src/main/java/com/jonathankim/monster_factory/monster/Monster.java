@@ -3,6 +3,7 @@ package com.jonathankim.monster_factory.monster;
 import com.jonathankim.monster_factory.color.Color;
 import com.jonathankim.monster_factory.location.Location;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -10,6 +11,7 @@ import javax.validation.constraints.Size;
 public class Monster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull
     private long id;
 
     @Size(max = 25, message = "Your Monster's name must be less than 25 characters")

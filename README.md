@@ -19,6 +19,7 @@ The goal of the application is to allow users to manage a personal vault by allo
  - Currently 94% done
  - added javascript to login page
  - fixed overflow of login and register page
+ - added data.sql file to autopopulate tables on runtime
  - began work on custom queries
 
 
