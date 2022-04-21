@@ -8,6 +8,8 @@ import com.jonathankim.monster_factory.monster.MonsterService;
 import com.jonathankim.monster_factory.location.LocationService;
 import com.jonathankim.monster_factory.size.Size;
 import com.jonathankim.monster_factory.size.SizeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,8 @@ public class MonsterController {
     private SizeService sizeService;
     private ColorService colorService;
 
+    private final Logger LOGGER = LoggerFactory.getLogger(getClass());
+
 
     @Autowired
     public MonsterController(MonsterService monsterService, LocationService locationService, SizeService sizeService, ColorService colorService) {
@@ -37,6 +41,7 @@ public class MonsterController {
     @GetMapping("/vault")
     public String getAllMonsters(Model model) {
         model.addAttribute("listMonsters", monsterService.getAllMonsters());
+        LOGGER.info("====PULLED MONSTER LIST FOR VIEW====");
         return "vault";
     }
 

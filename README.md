@@ -10,7 +10,7 @@ The goal of the application is to allow users to manage a personal vault by allo
  - [Future Improvements](#Future-Improvements)
  - [Technical Architecture](https://github.com/HelloJon29/jonathan_kim_case_study/blob/main/technical_architecture.jpg)
  - [Wire Frame](https://github.com/HelloJon29/jonathan_kim_case_study/blob/main/Kim_Jonathan_Wireframe.pdf)
- - [Schema Diagram](http://)
+ - [Schema Diagram](https://github.com/HelloJon29/jonathan_kim_case_study/blob/main/schema.png)
  - [JIRA](https://jonk.atlassian.net/jira/software/projects/KJC/boards/2/roadmap)
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
@@ -21,6 +21,7 @@ The goal of the application is to allow users to manage a personal vault by allo
  - fixed overflow of login and register page
  - added data.sql file to autopopulate tables on runtime
  - began work on custom queries
+ - began writing RestController for Monster
 
 
 **4-19**
