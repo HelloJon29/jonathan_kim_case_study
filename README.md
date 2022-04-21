@@ -15,6 +15,13 @@ The goal of the application is to allow users to manage a personal vault by allo
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
 ## Daily Progress
+**4-21**
+ - Currently 94% done
+ - added javascript to login page
+ - fixed overflow of login and register page
+ - began work on custom queries
+
+
 **4-19**
  - Currently 92% done
  - Finished html and css on front end
