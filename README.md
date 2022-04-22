@@ -15,6 +15,10 @@ The goal of the application is to allow users to manage a personal vault by allo
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access either on JIRA or through EMAIL
 
 ## Daily Progress
+**Capstone Rubric Progress**
+ - [Rubric](https://docs.google.com/document/d/14P9Cc5QgOHTBOVf0-nNVpRa-m2g-2U8wbDV35lYpU5o/edit)
+
+
 **4-21**
  - Currently 94% done
  - added javascript to login page
