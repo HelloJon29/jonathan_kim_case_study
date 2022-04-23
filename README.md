@@ -17,7 +17,12 @@ The goal of the application is to allow users to manage a personal vault by allo
 ## Daily Progress
 **Capstone Rubric Progress**
  - [Rubric](https://docs.google.com/document/d/14P9Cc5QgOHTBOVf0-nNVpRa-m2g-2U8wbDV35lYpU5o/edit)
+>please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access
 
+**4-22**
+ - Currently 95% done
+ - wrote tests on Location Repository 
+ - Finished Rest Controller
 
 **4-21**
  - Currently 94% done
