@@ -5,6 +5,7 @@ import com.jonathankim.monster_factory.location.Location;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Objects;
 
 @Entity
 @Table(name = "Monsters")
@@ -28,6 +29,17 @@ public class Monster {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "location_id")
     private Location location;
+
+    public Monster() {
+    }
+
+    public Monster(long id, String name, com.jonathankim.monster_factory.size.Size size, Color color, Location location) {
+        this.id = id;
+        this.name = name;
+        this.size = size;
+        this.color = color;
+        this.location = location;
+    }
 
     // Getters Setters
     public long getId() {
@@ -68,5 +80,18 @@ public class Monster {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Monster monster = (Monster) o;
+        return id == monster.id && Objects.equals(name, monster.name) && Objects.equals(size, monster.size) && Objects.equals(color, monster.color) && Objects.equals(location, monster.location);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, size, color, location);
     }
 }
