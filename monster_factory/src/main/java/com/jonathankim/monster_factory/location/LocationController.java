@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.controller;
+package com.jonathankim.monster_factory.location;
 
 import com.jonathankim.monster_factory.location.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;

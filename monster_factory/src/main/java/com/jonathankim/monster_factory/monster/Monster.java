@@ -33,8 +33,11 @@ public class Monster {
     public Monster() {
     }
 
-    public Monster(long id, String name, com.jonathankim.monster_factory.size.Size size, Color color, Location location) {
-        this.id = id;
+    public Monster(String name) {
+        this.name = name;
+    }
+
+    public Monster(String name, com.jonathankim.monster_factory.size.Size size, Color color, Location location) {
         this.name = name;
         this.size = size;
         this.color = color;

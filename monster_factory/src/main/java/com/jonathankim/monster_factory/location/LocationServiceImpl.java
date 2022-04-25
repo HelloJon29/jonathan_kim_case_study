@@ -35,7 +35,6 @@ public class LocationServiceImpl implements LocationService{
     public Location getLocationByCountry(String country) {
         return locationRepository.findByCountry(country);
     }
-
     @Override
     public void saveLocation(Location location) {
         locationRepository.save(location);

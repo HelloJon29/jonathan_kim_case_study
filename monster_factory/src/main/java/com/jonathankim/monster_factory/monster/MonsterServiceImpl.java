@@ -21,12 +21,6 @@ public class MonsterServiceImpl implements MonsterService {
     public List<Monster> getAllMonsters() {
         return monsterRepository.findAll();
     } // add empty list exception
-
-//    @Override
-//    public List<Monster> getAllMonstersByUserEmail(String email) {
-//        return userService.findByEmail(email).;
-//    }
-
     @Override
     public void saveMonster(Monster monster) {
         monsterRepository.save(monster);

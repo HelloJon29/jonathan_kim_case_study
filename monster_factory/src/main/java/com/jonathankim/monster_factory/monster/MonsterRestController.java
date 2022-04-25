@@ -1,4 +1,4 @@
-package com.jonathankim.monster_factory.controller;
+package com.jonathankim.monster_factory.monster;
 
 import com.jonathankim.monster_factory.color.ColorService;
 import com.jonathankim.monster_factory.location.LocationService;

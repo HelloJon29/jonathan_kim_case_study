@@ -16,8 +16,7 @@ public class Location {
     public Location() {
     }
 
-    public Location(long id, String country) {
-        this.id = id;
+    public Location(String country) {
         this.country = country;
     }
 
