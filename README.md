@@ -1,7 +1,7 @@
 # casestudy-fullstack-webapplication
 ## Monster Factory app
 This is my full-stack project for TekSystems.
-The goal of the application is to allow users to manage a personal vault by allowing them to create, edit and delete monsters.
+The goal of the application is to allow users to manage a vault by allowing them to create, edit and delete monsters.
 ## Overview
  - [User Stories](#User-Stories)
  - [Daily Progress](#Daily-Progress)
@@ -19,6 +19,13 @@ The goal of the application is to allow users to manage a personal vault by allo
 **Capstone Rubric Progress**
  - [Rubric](https://docs.google.com/document/d/14P9Cc5QgOHTBOVf0-nNVpRa-m2g-2U8wbDV35lYpU5o/edit)
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access
+
+**4-25**
+ - Now 100% done
+ - Cleaned up code
+ - Fixed Views
+ - Added error pages
+ - Fixed custom MonsterNotFoundException to now be thrown when given invalid id
 
 **4-24**
  - Currently 99% done
@@ -97,8 +104,13 @@ The goal of the application is to allow users to manage a personal vault by allo
 ## Technical Challenges
  - Thymeleaf not displaying authentication correctly
  - Model relationships and displaying those to the front end
- - Implement a search function on vault page
+ - 
 ## Lessons Learned
-
+ - Use online resources effectively and ask for help when stuck
+ - How to connect the front end to backend then database
+ - How to read errors
+ - how to debug effectively
 ## Future Improvements
-
+ - Implement a search function on vault page
+ - Have list of monsters for each location
+ - Have list of features to be selected and saved with a monster
