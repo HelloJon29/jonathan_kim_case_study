@@ -1,69 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
-
-<!--<head>-->
-<!--    <meta charset="ISO-8859-1">-->
-<!--    <title>Monster Management System</title>-->
-
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
-<!--</head>-->
-
-<!--<body>-->
-<!--<div class="container">-->
-<!--    <h1>Monster Management System</h1>-->
-<!--    <hr>-->
-<!--    <h2>Update Monster</h2>-->
-
-<!--    <form action="#" th:action="@{/saveMonster}" th:object="${monster}" method="POST">-->
-
-<!--        &lt;!&ndash; Add hidden form field to handle update &ndash;&gt;-->
-<!--        <input type="hidden" th:field="*{id}" />-->
-
-<!--        <input type="text" th:field="*{name}" class="form-control mb-4 col-4">-->
-
-<!--        <div class="form-group row">-->
-<!--            <label class="col-form-label col-sm-4"></label>-->
-<!--            <div>-->
-<!--                <select th:field="*{size}" class="form-control">-->
-<!--                    <th:block th:each="size : ${listSizes}">-->
-<!--                        <option th:text="${size.name}" th:value="${size.id}"></option>-->
-<!--                    </th:block>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="form-group row">-->
-<!--            <label class="col-form-label col-sm-4"></label>-->
-<!--            <div>-->
-<!--                <select th:field="*{color}" class="form-control">-->
-<!--                    <th:block th:each="color : ${listColors}">-->
-<!--                        <option th:text="${color.name}" th:value="${color.id}"></option>-->
-<!--                    </th:block>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="form-group row">-->
-<!--            <label class="col-form-label col-sm-4"></label>-->
-<!--            <div>-->
-<!--                <select th:field="*{location}" class="form-control">-->
-<!--                    <th:block th:each="location : ${listLocations}">-->
-<!--                        <option th:text="${location.country}" th:value="${location.id}"></option>-->
-<!--                    </th:block>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <button type="submit" class="btn btn-info col-2"> Update Employee</button>-->
-<!--    </form>-->
-
-<!--    <hr>-->
-
-<!--    <a th:href="@{/vault}"> Back to Monster List</a>-->
-<!--</div>-->
-<!--</body>-->
-
-<!--</html>-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
@@ -116,7 +50,7 @@
                         <!-- Add hidden form field to handle update -->
                         <input type="hidden" th:field="*{id}" />
 
-                        <input type="text" th:field="*{name}" class="form-control mb-4 col-4" placeholder="Monster Name">
+                        <input type="text" th:field="*{name}" class="form-control mb-4 col-4" placeholder="Monster Name" required maxlength="25">
                         <hr>
                         <div class="form-group row">
                             <label class="col-form-label col-sm-4">Size:</label>
@@ -156,7 +90,6 @@
             <hr>
             <a th:href="@{/vault}" class="btn btn-first"> Vault</a>
         </div>
-        <!--        <a class="btn btn-first" href="/pages/login.html">Get Started</a>-->
     </div>
 </div>
 

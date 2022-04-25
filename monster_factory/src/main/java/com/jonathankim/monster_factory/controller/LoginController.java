@@ -29,19 +29,6 @@ public class LoginController {
     public String logout(HttpServletRequest request){
         HttpSession httpSession = request.getSession();
         httpSession.invalidate();
-        return "redirect:/";
+        return "redirect:/home";
     }
-
-    @GetMapping("/testPage")
-    public String test(Principal principal, Model model) {
-        try {
-            User user = userRepository.findByEmail(principal.getName());
-            model.addAttribute("email", principal.getName());
-            model.addAttribute("firstname", user.getFirstName());
-        } catch(NullPointerException e) {
-            System.out.println("No role");
-        }
-        return "testPrincipal";
-    }
-
 }

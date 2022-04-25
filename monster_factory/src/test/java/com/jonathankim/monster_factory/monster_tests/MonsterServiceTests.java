@@ -1,10 +1,13 @@
 package com.jonathankim.monster_factory.monster_tests;
 
+import com.jonathankim.monster_factory.color.Color;
 import com.jonathankim.monster_factory.location.Location;
 import com.jonathankim.monster_factory.location.LocationRepository;
 import com.jonathankim.monster_factory.monster.Monster;
+import com.jonathankim.monster_factory.monster.MonsterNotFoundException;
 import com.jonathankim.monster_factory.monster.MonsterRepository;
 import com.jonathankim.monster_factory.monster.MonsterServiceImpl;
+import com.jonathankim.monster_factory.size.Size;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,10 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.persistence.EntityNotFoundException;
+import javax.persistence.PersistenceException;
 import javax.transaction.Transactional;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

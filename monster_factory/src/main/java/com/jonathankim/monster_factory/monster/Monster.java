@@ -22,7 +22,7 @@ public class Monster {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "size_id")
     private com.jonathankim.monster_factory.size.Size size;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "color_id")
     private Color color;
 
