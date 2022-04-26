@@ -20,6 +20,10 @@ The goal of the application is to allow users to manage a vault by allowing them
  - [Rubric](https://docs.google.com/document/d/14P9Cc5QgOHTBOVf0-nNVpRa-m2g-2U8wbDV35lYpU5o/edit)
 >please contact [Jonathan Kim](mailto:jonkim1996@gmail.com) for access
 
+**4-26**
+ - Project Completed!
+ - Fix Location Tests 
+
 **4-25**
  - Now 100% done
  - Cleaned up code
@@ -104,7 +108,7 @@ The goal of the application is to allow users to manage a vault by allowing them
 ## Technical Challenges
  - Thymeleaf not displaying authentication correctly
  - Model relationships and displaying those to the front end
- - 
+ - styling pages with bootstrap
 ## Lessons Learned
  - Use online resources effectively and ask for help when stuck
  - How to connect the front end to backend then database
