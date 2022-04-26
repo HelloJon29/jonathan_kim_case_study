@@ -20,13 +20,8 @@ public class LocationRepositoryUnitTests {
     @Test
     public void findByCountryShouldReturnNullGivenInvalidValue() {
         Location location = locationRepository.findByCountry("jack");
-        Location location1 = new Location("ITALY");
 
-        locationRepository.save(location1);
-
-        System.out.println(locationRepository.findByCountry("ITALY").getCountry());
-
-        assertThat(location).isEqualTo(null);
+        assertThat(location).isNull();
     }
 
     @Test
@@ -34,6 +29,4 @@ public class LocationRepositoryUnitTests {
         Location location = locationRepository.findByCountry("USA");
         assertThat(location.getCountry()).isEqualTo("USA");
     }
-
-
 }

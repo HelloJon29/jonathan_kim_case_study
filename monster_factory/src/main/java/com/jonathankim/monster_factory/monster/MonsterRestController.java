@@ -47,7 +47,7 @@ public class MonsterRestController {
     }
     @PutMapping("/monsters/{id}")
     Monster updateMonster(@RequestBody Monster monster, @PathVariable Long id) {
-        return monsterRepository.findById(id).map(employee -> {
+        return monsterRepository.findById(id).map(i -> {
             monster.setName(monster.getName());
             monster.setColor(monster.getColor());
             monster.setSize(monster.getSize());
