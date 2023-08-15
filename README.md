@@ -2,6 +2,10 @@
 ## Monster Factory app
 This is my full-stack project for TekSystems.
 The goal of the application is to allow users to manage a vault by allowing them to create, edit and delete monsters.
+
+## Static Demo of front end
+ - [Monster Factory](https://hellojon29.github.io/Monster_Factory/)
+
 ## Overview
  - [User Stories](#User-Stories)
  - [Daily Progress](#Daily-Progress)
